@@ -1,17 +1,17 @@
 export interface IUser {
-    name: String;
-    surname: String;
-    email: String;
-    password: String;
-    title: String;
-    birthday: Date;
-    SocialMedia: ISocialMedia[];
-    phone: String;
-    address: String;
+  name: string;
+  surname: string;
+  email: string;
+  password: string;
+  title: string;
+  birthday: Date;
+  SocialMedia?: ISocialMedia[];
+  phone: string;
+  address: string;
 }
 
 export interface ISocialMedia {
-    name: string;
-    url:string;
-    icon:string
+  name: string;
+  url: string;
+  icon: string;
 }
