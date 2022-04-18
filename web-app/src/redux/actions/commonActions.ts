@@ -1,5 +1,5 @@
 import axios from "axios";
-const API_URL = "http://localhost:3000";
+const API_URL = "https://digital-business-card-app.herokuapp.com/";
 
 
 export const getQuery = async (path: string, cb: any) => {
