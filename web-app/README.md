@@ -24,12 +24,12 @@
     - Navigation Bar yaptım.
     - İki tane form alanı oluşturdum. Login sayfasında Formik kullandım ve basit validasyon işlemi yaptım.
     - AJAX requestini simule edebilmek için proje içine bir JSON dosyası koydum ve bu dosyadaki verileri Axios ile çektim.
-    - Github'da paylaştım ()
+    - Github'da paylaştım (https://github.com/musabdedecik/digital-business-card-app)
     - Typescript kullandım
     - Hook'lar kullandım
     - Ref Hook kullandım (LoginForm component)
     - UI kit olarak MaterialUI kullandım. Bunun yanında değişik CSS kullanımlarına da örnekler verdim.
-    - Heroku'ya deploy ettim ()
+    - Heroku'ya deploy ettim (https://digital-business-card-app.herokuapp.com/)
 
 # Projeyi çalıştırmak için bu adımları izleyin
   - Git clone ile projeyi bilgisayarınıza alın.
