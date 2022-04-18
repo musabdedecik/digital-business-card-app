@@ -1,19 +1,24 @@
-import Login from "./components/Views/Login";
+import Login from "./components/Pages/Login";
 import { Switch, Route, Redirect } from "react-router-dom";
-import Dashboard from "./components/Views/Dashboard";
 import { withRouter } from "react-router-dom";
 import { getToken } from "./configures/auth";
+import DashboardLayout from "./components/Layouts/DashboardLayout";
+import NotFound from "./components/Pages/NotFound";
+
 function App() {
   const isAuth = getToken();
   return (
     <Switch>
-      <Route path="/login" component={Login}>
+      <Route exact path="/login" component={Login}>
         {isAuth && <Redirect from="/login" to="/dashboard"></Redirect>}
       </Route>
-      <Route path="/dashboard" component={Dashboard}>
+      <Route path="/dashboard" component={DashboardLayout}>
         {!isAuth && <Redirect from="/dashboard" to="/login"></Redirect>}
       </Route>
       <Redirect exact from="/" to={isAuth ? "/dashboard" : "/login"} />
+      <Route component={NotFound}>
+        <Redirect to="/dashboard"></Redirect>
+      </Route>
     </Switch>
   );
 }

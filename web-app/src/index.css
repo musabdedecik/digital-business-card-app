@@ -11,3 +11,249 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+* {
+  box-sizing: border-box;
+}
+
+form {
+  background-color: #fff;
+  padding: 24px;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.326);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+a {
+  text-decoration: none !important;
+  color: #fff !important;
+}
+
+.sub-items {
+  color: #444 !important;
+  padding: 5px 10px;
+}
+
+.container {
+  width: 35%;
+  height: 450px;
+  margin: 0 auto;
+  position: relative;
+  -webkit-perspective: 1000;
+  -moz-perspective: 1000;
+  perspective: 1000;
+  -moz-transform: perspective(1400px);
+  -ms-transform: perspective(1400px);
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-perspective-origin: right;
+  -moz-perspective-origin: right;
+  perspective-origin: right;
+}
+
+.card {
+  height: 450px;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.326);
+  position: relative;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transform-origin: 100% 0%;
+  -moz-transform-origin: 100% 0%;
+  -ms-transform-origin: 100% 0%;
+  transform-origin: 100% 0%;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  transition: .8s ease-in-out;
+  border-radius: 8px;
+}
+
+
+.front,
+.back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: white;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-radius: 8px;
+}
+
+.front {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: center;
+  justify-content: center;
+  z-index: 2;
+  -webkit-transform: rotateY(0deg);
+  -moz-transform: rotateY(0deg);
+  -ms-transform: rotateY(0deg);
+  transform: rotateY(0deg);
+}
+
+.back {
+  -webkit-transform: rotateY(-180deg);
+  -moz-transform: rotateY(-180deg);
+  -ms-transform: rotateY(-180deg);
+  transform: rotateY(-180deg);
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container:hover .card {
+  -webkit-transform: rotateY(180deg) translateX(100%);
+  -moz-transform: rotateY(180deg) translateX(100%);
+  -ms-transform: rotateY(180deg) translateX(100%);
+  transform: rotateY(180deg) translateX(100%);
+  cursor: pointer;
+}
+
+.front-profile-image {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.front-profile-image img {
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+.form-control-mui {
+  margin-top: 10px !important;
+  width: 100%;
+}
+
+.card-ul {
+  margin: 0;
+  width: 100%;
+  list-style: none;
+  position: absolute;
+  bottom: 30px;
+  left: 0;
+  padding: 0 1%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.card-ul:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+.card-ul li {
+  width: 100%;
+  margin: 0 1%;
+  padding: 10px;
+  border-radius: 4px;
+  position: relative;
+  text-align: center;
+  color: #4E203C;
+}
+
+
+h1 {
+  color: #FC5135;
+  text-transform: uppercase;
+  font-weight: 400;
+  line-height: 1;
+  text-align: center;
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
+h1 span {
+  color: #4E203C;
+  display: block;
+  font-size: .45em;
+  letter-spacing: 3px;
+  margin-top: 10px;
+}
+
+h1 i {
+  font-style: normal;
+  text-transform: none;
+}
+
+.card-form-wrapper {
+  display: flex;
+  margin-top: 24px;
+  flex-wrap: nowrap;
+  height: 450px;
+}
+
+.card-form-wrapper form {
+  width: 48%;
+}
+
+.overlay-login {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background: url('https://html.sammy-codes.com/images/background.jpg')
+}
+
+@media only screen and (max-width: 1024px) {
+  a {
+    color: #444 !important;
+  }
+
+  .card-form-wrapper {
+    flex-direction: column;
+  }
+
+  .overlay-login {
+    background-color: #f7f7f7;
+    overflow: hidden;
+  }
+
+  .overlay-login form {
+    margin-left: 15px !important;
+    margin-right: 15px !important;
+  }
+
+  .card-form-wrapper form {
+    width: 100%;
+    order: 2;
+    margin-bottom: 25px;
+  }
+
+  .container {
+    width: 100%;
+    margin-bottom: 25px;
+    order: 1
+  }
+
+  .card-ul {
+    flex-wrap: wrap;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  form {
+    width: 100%;
+  }
+
+
+  .text-bio {
+    text-align: center;
+    width: 100% !important;
+  }
+
+}

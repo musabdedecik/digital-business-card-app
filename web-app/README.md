@@ -1,46 +1,38 @@
-# Getting Started with Create React App
+# Uygulama Hakkında
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+  - Bu projede React kullanarak basit bir SPA oluşturdum.
+  - Uygulamanın amacı gerçek hayattaki kartviziti simule etmek.
+  - İlk önce bizi bir login sayfası karşılıyor. 
+  - Giriş yaptıktan sonra bir dashboard ekranı geliyor.
+  - Dashboardda bir MaterialUI kütüphanesini kullanarak bir NavBar oluşturdum.
+  - Navbar üzerinde uygulama içinde gezinebileceğimiz menulere ve çıkış yapma mekanizmasına yer verdim.
+  - NavBar'ın altında  bir alan oluşturdum ve kullanıcının görmek istediği sayfaları bu alanda render ettim.
+  - Dashboard sayfasında sol kısımda kullanıcının bilgilerini değiştirebileceği bir form oluşturdum.
+  - Sağ tarafta ise formda girilen verileri anlık olarak gösteren bir kartvizit görünümü oluşturdum.
+  - Uygulama Hakkında sayfasında bir Accordion menuye yer verdim. Burada kısaca uygulama ve kullanılan teknolojiler hakkındaki bilgilere yer verdim.
+  - Hesabım sayfasında basit bir kart component ı oluşturdum ve kullanıcının bilgilerini gösterdim.
 
-## Available Scripts
 
-In the project directory, you can run:
+# NOTLAR:
+  - Projeyi create-react-app ile başlattım (şu anki işyerinde biraz işler yoğun o yüzden zamanı verimli kullanmak istedim)
+  - Kod yazarken pascalcase isimlendirme yaptım.
+  - Gönderdiğiniz assignment içindekilere örnekler vermeye çalıştım.
+    - React kullandım
+    - State management için Redux kullandım
+    - Routing mekanizması dahil ettim (ReactRouterDOM)
+    - Login sayfası yaptım
+    - Navigation Bar yaptım.
+    - İki tane form alanı oluşturdum. Login sayfasında Formik kullandım ve basit validasyon işlemi yaptım.
+    - AJAX requestini simule edebilmek için proje içine bir JSON dosyası koydum ve bu dosyadaki verileri Axios ile çektim.
+    - Github'da paylaştım ()
+    - Typescript kullandım
+    - Hook'lar kullandım
+    - Ref Hook kullandım (LoginForm component)
+    - UI kit olarak MaterialUI kullandım. Bunun yanında değişik CSS kullanımlarına da örnekler verdim.
+    - Heroku'ya deploy ettim ()
 
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+# Projeyi çalıştırmak için bu adımları izleyin
+  - Git clone ile projeyi bilgisayarınıza alın.
+  - Visual Studio Code içinde `cd web-app` komutu ile proje dizinine gidin.
+  - Daha sonra `npm install` komutu ile gerekli bağımlılıkları kurun.
+  - Bağımlılıklar kurulduktan sonra `npm start` komutunu çalıştırarak uygulamayı `http://localhost:3000` adresinde görüntüleyebilirsiniz.

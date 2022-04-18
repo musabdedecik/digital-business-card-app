@@ -1,3 +1,4 @@
+
 export const getToken = ():boolean => {
   try {
     if (sessionStorage.getItem("token")) {
@@ -10,6 +11,7 @@ export const getToken = ():boolean => {
     return false;
   }
 };
+
 export const setToken = (token: string) => {
     try {
         sessionStorage.setItem("token", token);
@@ -18,4 +20,14 @@ export const setToken = (token: string) => {
         console.error("Set Token Error", error)
         return false;
     }
-} 
+};
+
+export const removeToken = ():boolean => {
+  try {
+    sessionStorage.removeItem("token");
+    return true
+  } catch (error) {
+    console.error("Auth error!",error);
+    return false;
+  }
+};
